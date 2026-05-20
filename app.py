@@ -96,7 +96,7 @@ def limpiar_df(df_raw):
 
 # ── Estado vacío ───────────────────────────────────────────────────
 if archivo is None:
-    st.info("Sube un archivo CSV desde la barra lateral para comenzar.")
+    #st.info("Sube un archivo CSV desde la barra lateral para comenzar.")
     np.random.seed(42)
     n = 120
     area         = np.random.randint(40, 180, n)
