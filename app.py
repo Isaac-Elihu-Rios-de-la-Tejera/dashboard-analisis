@@ -18,13 +18,13 @@ warnings.filterwarnings("ignore")
 # ── Configuración ──────────────────────────────────────────────────
 st.set_page_config(page_title="Dashboard ML", page_icon="", layout="wide")
 st.title("Dashboard de Análisis de Datos")
-st.markdown("Sube un archivo CSV y obtén estadísticas, gráficas y predicciones automáticas.")
+#st.markdown("Sube un archivo CSV y obtén estadísticas, gráficas y predicciones automáticas.")
 st.divider()
 
 st.sidebar.header("Configuración")
 archivo = st.sidebar.file_uploader("Sube tu archivo CSV", type=["csv"])
 st.sidebar.markdown("---")
-st.sidebar.caption("Proyecto 184642")
+#st.sidebar.caption("Proyecto 184642")
 
 # ── Función robusta para leer CUALQUIER CSV ────────────────────────
 def leer_csv_robusto(archivo):
