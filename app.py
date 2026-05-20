@@ -17,11 +17,11 @@ warnings.filterwarnings("ignore")
 
 # ── Configuración ──────────────────────────────────────────────────
 st.set_page_config(page_title="Dashboard ML", page_icon="", layout="wide")
-st.title("📊 Dashboard de Análisis de Datos")
+st.title("Dashboard de Análisis de Datos")
 st.markdown("Sube un archivo CSV y obtén estadísticas, gráficas y predicciones automáticas.")
 st.divider()
 
-st.sidebar.header("⚙️ Configuración")
+st.sidebar.header("Configuración")
 archivo = st.sidebar.file_uploader("Sube tu archivo CSV", type=["csv"])
 st.sidebar.markdown("---")
 st.sidebar.caption("Proyecto universitario · Python · Streamlit")
@@ -96,7 +96,7 @@ def limpiar_df(df_raw):
 
 # ── Estado vacío ───────────────────────────────────────────────────
 if archivo is None:
-    st.info("👈  Sube un archivo CSV desde la barra lateral para comenzar.")
+    st.info("Sube un archivo CSV desde la barra lateral para comenzar.")
     np.random.seed(42)
     n = 120
     area         = np.random.randint(40, 180, n)
@@ -118,14 +118,14 @@ if archivo is None:
 df_raw, error_lectura = leer_csv_robusto(archivo)
 
 if error_lectura:
-    st.error(f"❌ Error al leer el archivo: {error_lectura}")
+    st.error(f"Error al leer el archivo: {error_lectura}")
     st.stop()
 
 # ── Limpiar datos ──────────────────────────────────────────────────
 df, cols_num, error_limpieza = limpiar_df(df_raw)
 
 if error_limpieza:
-    st.error(f"❌ {error_limpieza}")
+    st.error(f"{error_limpieza}")
     st.info("Sugerencia: verifica que tu CSV tenga columnas con números.")
     st.dataframe(df_raw.head(5))
     st.stop()
@@ -140,7 +140,7 @@ if cols_ignoradas:
     )
 
 # ── Pestañas ───────────────────────────────────────────────────────
-tab1, tab2, tab3 = st.tabs(["🔍 Exploración", "📈 Visualizaciones", "🤖 Predicción"])
+tab1, tab2, tab3 = st.tabs(["Exploración", "Visualizaciones", "Predicción"])
 
 # ══════════════════════════════════════════════════════
 # PESTAÑA 1 — Exploración
