@@ -270,7 +270,7 @@ with tab3:
     plt.tight_layout()
     st.pyplot(fig3)
 
-    st.subheader("🔮 Prueba tu predicción")
+    st.subheader("Predicción")
     st.caption("Ajusta los valores y obtén una predicción instantánea.")
 
     n_cols_ui = min(len(features), 4)
