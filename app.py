@@ -1,8 +1,3 @@
-"""
-Dashboard de Análisis de Datos con Machine Learning
-Proyecto universitario — Python + Streamlit
-"""
-
 import streamlit as st  # Crear interfaz web interactiva
 import pandas as pd # Manipular y analizar datos
 import numpy as np # Realizar operaciones matemáticas
@@ -21,13 +16,11 @@ warnings.filterwarnings("ignore")
 # ── Configuración ──────────────────────────────────────────────────
 st.set_page_config(page_title="Dashboard ML", page_icon="", layout="wide")
 st.title("Dashboard de Análisis de Datos ")
-#st.markdown("Sube un archivo CSV y obtén estadísticas, gráficas y predicciones automáticas.")
 st.divider()
 
 st.sidebar.header("Configuración")
 archivo = st.sidebar.file_uploader("Sube tu archivo CSV", type=["csv"])
 st.sidebar.markdown("---")
-#st.sidebar.caption("Proyecto 184642")
 
 # ── Función robusta para leer CUALQUIER CSV ────────────────────────
 def leer_csv_robusto(archivo):
@@ -114,7 +107,6 @@ if archivo is None:
         "antiguedad_anos": antiguedad, "distancia_km": distancia,
         "precio_usd": precio,
     }).head(10), use_container_width=True)
-    #st.caption("Sube tu propio CSV para analizarlo.")
     st.stop()
 
 # ── Leer archivo ───────────────────────────────────────────────────
@@ -160,10 +152,7 @@ with tab1:
 
     st.subheader("Estadísticas descriptivas")
     st.dataframe(df.describe().round(2), use_container_width=True)
-
-# ══════════════════════════════════════════════════════
 # PESTAÑA 2 — Visualizaciones
-# ══════════════════════════════════════════════════════
 with tab2:
     col_sel = st.selectbox("Variable para histograma", cols_num)
 
@@ -209,10 +198,7 @@ with tab2:
     ax.spines["right"].set_visible(False)
     plt.tight_layout()
     st.pyplot(fig2)
-
-# ══════════════════════════════════════════════════════
 # PESTAÑA 3 — Predicción
-# ══════════════════════════════════════════════════════
 with tab3:
     st.subheader("Configuración del modelo")
 
