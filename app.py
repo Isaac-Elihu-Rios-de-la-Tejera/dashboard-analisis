@@ -3,16 +3,19 @@ Dashboard de Análisis de Datos con Machine Learning
 Proyecto universitario — Python + Streamlit
 """
 
-import streamlit as st
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import r2_score, mean_absolute_error
-from sklearn.preprocessing import StandardScaler
-import warnings, io
+import streamlit as st  # Crear interfaz web interactiva
+import pandas as pd # Manipular y analizar datos
+import numpy as np # Realizar operaciones matemáticas
+import matplotlib.pyplot as plt # Generar gráficas y visualizaciones
+import seaborn as sns # Crear gráficas estadísticas mejoradas
+
+from sklearn.linear_model import LinearRegression # Modelo de regresión lineal
+from sklearn.model_selection import train_test_split # Dividir datos en entrenamiento y prueba
+from sklearn.metrics import r2_score, mean_absolute_error # Medir precisión y error del modelo
+from sklearn.preprocessing import StandardScaler # Escalar y normalizar datos
+
+import warnings, io # Manejo de advertencias y lectura en memoria
+
 warnings.filterwarnings("ignore")
 
 # ── Configuración ──────────────────────────────────────────────────
