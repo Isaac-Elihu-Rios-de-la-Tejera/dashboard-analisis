@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore")
 
 # ── Configuración ──────────────────────────────────────────────────
 st.set_page_config(page_title="Dashboard ML", page_icon="", layout="wide")
-st.title("Dashboard de Análisis de Datos")
+st.title("Dashboard de Análisis de Datos Elihu Gay")
 #st.markdown("Sube un archivo CSV y obtén estadísticas, gráficas y predicciones automáticas.")
 st.divider()
 
