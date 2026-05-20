@@ -24,7 +24,7 @@ st.divider()
 st.sidebar.header("Configuración")
 archivo = st.sidebar.file_uploader("Sube tu archivo CSV", type=["csv"])
 st.sidebar.markdown("---")
-st.sidebar.caption("Proyecto universitario · Python · Streamlit")
+st.sidebar.caption("Proyecto 184642")
 
 # ── Función robusta para leer CUALQUIER CSV ────────────────────────
 def leer_csv_robusto(archivo):
